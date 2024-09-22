@@ -616,7 +616,7 @@ require('lazy').setup({
       local servers = {
         -- clangd = {},
         -- gopls = {},
-        -- pyright = {},
+        pyright = {},
         rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
@@ -939,6 +939,16 @@ require('lazy').setup({
   --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
   --    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
   -- { import = 'custom.plugins' },
+
+  { -- Conquer of Completion (LSP for Python and ...Go?)
+    'neoclide/coc.nvim',
+    branch = 'release',
+    -- obr: NOTE: Installing coc-pyright is a manual step for now
+    -- install CoC Python extension with `:CocInstall coc-pyright`
+    -- configure with `:CocConfigure` (to update coc-settings.json)
+    -- https://github.com/fannheyward/coc-pyright?tab=readme-ov-file#configurations
+    --
+  },
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
